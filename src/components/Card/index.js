@@ -1,0 +1,15 @@
+import React from 'react';
+
+import { Container, Label } from './styles';
+
+export default function Card ({ data }) {
+    return(
+        <Container>
+            <header>
+                {data.labels.map(label => <Label color={label} />)}
+            </header>
+            <p>Texto Texto Texto Texto</p>
+            { data.user && <img src={data.user} alt='' /> }
+        </Container>
+    );
+}
